@@ -1,21 +1,15 @@
 n = 600851475143
 
 factors = []
-prime = []
 for i in range(1,int(n**(1/2))+1):
     if n%i ==0:
         factors.extend([i,n//i])
 
-def check_prime(n):
-    for i in range(2,int(n**(1/2)+1)):
-        if n%i==0:
-            return False
-            break
-    return True
+i = 0
+while i<len(factors):
+    for j in factors:
+        if j%factors[i]==0  and j!=factors[i] :
+            factors.remove(j)
+    i+=1
 
-for i in factors:
-    if check_prime(i):
-        prime.append(i)
-prime.remove(1)
-
-print(prime[-1])
+print(factors[-1])
