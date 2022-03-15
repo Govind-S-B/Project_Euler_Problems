@@ -12,4 +12,7 @@ while i<len(factors):
             factors.remove(j)
     i+=1
 
+if len(factors) == 1:
+    factors.append(n)
+
 print(factors[-1])
