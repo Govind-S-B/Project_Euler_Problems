@@ -1,3 +1,6 @@
+import time
+start_time = time.time()
+
 lim = 10001
 
 prime = [2]
@@ -13,3 +16,5 @@ while len(prime) < lim:
 prime.sort()
 
 print(prime[-1])
+
+print("--- %s seconds ---" % (time.time() - start_time))

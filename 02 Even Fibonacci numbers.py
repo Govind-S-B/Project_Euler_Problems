@@ -1,3 +1,6 @@
+import time
+start_time = time.time()
+
 limit_value = 4000000
 
 term = 1
@@ -12,5 +15,6 @@ while term < limit_value :
     fib_seq.append(term)
     term = fib_seq[-1] + fib_seq[-2]
 
-print(fib_seq)
 print(sum)
+
+print("--- %s seconds ---" % (time.time() - start_time))

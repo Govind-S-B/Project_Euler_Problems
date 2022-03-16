@@ -1,3 +1,6 @@
+import time
+start_time = time.time()
+
 n = 600851475143
 
 def factor(num): # takes a int and returns set of factors
@@ -36,3 +39,5 @@ def prime_factor(num):
     return prime_factors
 
 print(prime_factor(n)[-1])
+
+print("--- %s seconds ---" % (time.time() - start_time))

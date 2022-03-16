@@ -1,3 +1,6 @@
+import time
+start_time = time.time()
+
 lim = 100
 
 sq_sum_diff = 0
@@ -10,3 +13,5 @@ for i in list_nums:
     list_nums[list_nums.index(i)] = None
 
 print(sq_sum_diff)
+
+print("--- %s seconds ---" % (time.time() - start_time))
